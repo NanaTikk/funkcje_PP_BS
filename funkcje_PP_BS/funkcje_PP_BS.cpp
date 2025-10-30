@@ -81,6 +81,38 @@ void losowanie(int x) {
 	procent = 10 * ilerazy;
 	cout << "\nTwoj szczesliwy los pojawil sie " << procent << "%!";
 }
+//rozw. 1
+void parzysta(int n) {
+	cout << "Do liczb parzystych:\n";
+	for (int i = 0; i < n; n--)
+	{
+		if (n % 2 == 0) {
+			cout << n/2 << ", ";
+		}
+		else {
+			continue;
+		}
+	}
+}
+
+void nieparzysta(int n) {
+	cout << "Dla liczb nieparzystych:\n";
+	for (int i = 0; i < n; n--) {
+		if (n % 2 != 0) {
+			cout << (n - 1) / 2 << ", ";
+		}
+		else {
+			continue;
+		}
+	}
+}
+//rozw. 2
+void parzysta2(int n) {
+	cout << n / 2 << ", ";
+}
+void nieparzysta2(int n) {
+	cout << (n - 1) / 2 << ", ";
+}
 int main()
 {
 	//zad 1
@@ -190,5 +222,23 @@ int main()
 	cin >> los;
 	losowanie(los);
 	*/
+
+	//zad 8
+	//rozw. 1
+	parzysta(100);
+	cout << endl << endl;
+	nieparzysta(100);
+
+	//rozw. 2
+	cout << "\n****************************************\n";
+	int liczba = 100;
+	for (int i = 0; i < liczba; liczba--) {
+		if (liczba % 2 == 0) {
+			parzysta2(liczba);
+		}
+		else {
+			nieparzysta2(liczba);
+		}
+	}
 	return 0;
 }
